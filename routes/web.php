@@ -15,25 +15,6 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-$name = 'yousef';
-Route::view('/', 'welcome', compact('name'));
-
-// Route::view('/', 'welcome', ['name' => 'Ahmed']);
-Route::get('/user/{id}',function($userID){
-    return 'user '.$userID;
+Route::get('/', function () {
+    return view('welcome');
 });
-
-Route::get('*',function(){
-    return 'love you ';
-});
-
-
-
-
-Route::get('/user/{id}', function (Request $request, $id) {
-    return 'User '.$id;
-    });
-;
